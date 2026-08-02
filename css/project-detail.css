@@ -271,8 +271,8 @@
 }
 
 .user-target__photo--1 { top: var(--space-8);    left: var(--space-8); }
-.user-target__photo--2 { top: var(--space-8);     right: var(--space-8); }
-.user-target__photo--3 { bottom: -20px; left: 60%; }
+.user-target__photo--2 { top: calc(-1 * var(--space-6)); right: var(--space-8); }
+.user-target__photo--3 { bottom: calc(-1 * var(--space-16)); right: 140px; }
 
 @media (max-width: 640px) {
   .user-target__photo { display: none; } /* di HP disembunyiin biar teks ga ketutup */
@@ -577,7 +577,7 @@
 ------------------------------------------ */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-5);
 }
 
