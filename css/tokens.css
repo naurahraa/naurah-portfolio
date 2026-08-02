@@ -1,0 +1,157 @@
+/* ============================================
+   NAURAH PORTFOLIO — DESIGN TOKENS
+   tokens.css · semua variable dipakai di sini
+   ============================================ */
+
+:root {
+  /* ------------------------------------------
+     BRAND COLORS — raw values
+  ------------------------------------------ */
+  --color-primary: #188aec;
+  --color-primary-hover: #1179d1;
+  --color-primary-active: #0f68b8;
+
+  --color-dark: #282d46;
+  --color-dark-secondary: #143d61;
+
+  --color-light: #ebebeb;
+  --color-light-secondary: #f8f8f8;
+
+  --color-extra-light: #edf7ff;
+  --color-extra-light-secondary: #f3f9ff;
+  --color-extra-light-2: var(--color-extra-light-secondary); /* alias, backward compat */
+
+  --color-cons: #f57878;
+
+  --color-white: #ffffff;
+
+  /* Project accent colors */
+  --color-career: #1fa36b;
+  --color-gluco: #17c3c9;
+  --color-sivitas: #f5a623;
+  --color-lumora: #8b5cf6;
+
+  /* ------------------------------------------
+     SEMANTIC TOKENS — light mode
+  ------------------------------------------ */
+  --bg-page: var(--color-white);
+  --bg-surface: var(--color-white);
+  --bg-subtle: #f4f4f5;
+  --bg-muted: #e4e4e7;
+  --bg-accent: var(--color-extra-light);
+
+  --text-primary: var(--color-dark);
+  --text-secondary: #5b5f74;
+  --text-muted: #8a8d9c;
+  --text-on-accent: var(--color-white);
+  --text-link: var(--color-primary);
+
+  --border-subtle: #e4e4e7;
+  --border-default: #d4d4d8;
+
+  /* ------------------------------------------
+     TYPOGRAPHY
+  ------------------------------------------ */
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Poppins", "Segoe UI", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  /* ------------------------------------------
+     NAMED TYPE SCALE — sesuai Figma text styles
+     size / weight / letter-spacing
+  ------------------------------------------ */
+  --fs-title: 4.5rem; /* 72px */
+  --ls-title: -0.025em; /* -2.5% */
+  --fw-title: var(--weight-semibold);
+
+  --fs-heading: 3rem; /* 48px */
+  --ls-heading: -0.03em; /* -3% */
+  --fw-heading: var(--weight-semibold);
+
+  --fs-subheading: 2rem; /* 32px */
+  --ls-subheading: -0.03em; /* -3% */
+  --fw-subheading: var(--weight-semibold);
+
+  --fs-body: 1.625rem; /* 26px */
+  --fw-body: var(--weight-medium);
+
+  --fs-body-light: 1.625rem; /* 26px */
+  --fw-body-light: var(--weight-regular);
+
+  --fs-body-bold: 1.625rem; /* 26px */
+  --fw-body-bold: var(--weight-semibold);
+
+  --fs-body-small: 1.375rem; /* 22px */
+  --fw-body-small: var(--weight-medium);
+
+  --fs-body-xs: 1.25rem; /* 20px */
+  --fw-body-xs: var(--weight-regular);
+
+  /* ------------------------------------------
+     SPACING
+  ------------------------------------------ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ------------------------------------------
+     RADIUS
+  ------------------------------------------ */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 999px;
+
+  /* ------------------------------------------
+     SHADOW
+  ------------------------------------------ */
+  --shadow-sm: 0 1px 2px rgba(40, 45, 70, 0.06);
+  --shadow-md: 0 8px 24px rgba(40, 45, 70, 0.08);
+  --shadow-lg: 0 20px 48px rgba(40, 45, 70, 0.12);
+
+  /* ------------------------------------------
+     LAYOUT
+  ------------------------------------------ */
+  --container-max: 1180px;
+  --nav-height: 88px;
+
+  /* ------------------------------------------
+     MOTION
+  ------------------------------------------ */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 600ms;
+}

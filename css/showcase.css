@@ -1,0 +1,150 @@
+/* ============================================
+   SHOWCASE PAGE — hero banner, project blocks,
+   placeholder gallery grid
+   ============================================ */
+
+/* ------------------------------------------
+   HERO BANNER
+------------------------------------------ */
+.showcase-hero {
+  background: linear-gradient(90deg, #3981bd 0%, #5298d1 66%, #96d0ff 100%);
+  padding: 5.125rem var(--space-6); /* 82px vertikal, sesuai spek Figma */
+  text-align: center;
+}
+
+.showcase-hero__title {
+  font-family: "Inria Serif", serif;
+  font-size: 5.25rem; /* 84px */
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+}
+
+/* ------------------------------------------
+   PROJECT BLOCK
+   bg tetep putih, dipisah divider abu-abu
+------------------------------------------ */
+.project-block {
+  padding: var(--space-20) 0;
+  border-top: 12px solid var(--border-subtle);
+}
+
+.project-block:first-of-type {
+  border-top: none;
+}
+
+.project-block__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.project-block__eyebrow svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-cons);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.project-block__eyebrow-text {
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-size: var(--text-2xl); /* 24px */
+  font-weight: var(--weight-regular);
+}
+
+.project-block__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  font-style: italic;
+}
+
+/* ------------------------------------------
+   INTRO ROW — kiri: eyebrow+title+logo (stack)
+              kanan: hero mockup tinggi, tingginya
+              ngikutin tinggi kolom kiri
+------------------------------------------ */
+.project-block__intro {
+  display: flex;
+  gap: var(--space-6);
+  align-items: stretch;
+  margin-bottom: var(--space-4);
+}
+
+.project-block__intro-left {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.gallery-item--hero {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-subtle);
+  min-height: 320px;
+}
+
+.gallery-item--hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------------------------------
+   BARIS TAMBAHAN — tiap baris punya jumlah
+   kolom sendiri sesuai sisa gambar per project
+------------------------------------------ */
+.gallery-row {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.gallery-row .gallery-item {
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  min-width: 0;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-subtle); /* fallback selagi gambar loading */
+}
+
+.gallery-item--logo {
+  aspect-ratio: 418 / 229;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .project-block__intro {
+    flex-direction: column;
+  }
+  .project-block__intro-left {
+    flex: 1 1 auto;
+  }
+  .gallery-item--hero {
+    min-height: 280px;
+  }
+  .gallery-row {
+    flex-wrap: wrap;
+  }
+  .gallery-row .gallery-item {
+    flex: 1 1 calc(50% - var(--space-4));
+  }
+}

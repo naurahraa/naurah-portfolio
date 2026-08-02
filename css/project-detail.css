@@ -1,0 +1,731 @@
+/* ============================================
+   PROJECT DETAIL PAGES — shared components
+   dipakai di career.html, glucocheck.html,
+   sivitas.html, lumora.html
+   ============================================ */
+
+/* Tiap halaman set warna aksen sendiri via class di <body> */
+.theme-career     { --project-accent: var(--color-career); }
+.theme-glucocheck { --project-accent: var(--color-gluco); }
+.theme-sivitas    { --project-accent: var(--color-sivitas); }
+.theme-lumora     { --project-accent: var(--color-lumora); }
+
+/* ------------------------------------------
+   CASE HERO
+------------------------------------------ */
+.case-hero {
+  padding: var(--space-16) 0 var(--space-8);
+}
+
+.case-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start; /* biar media nempel atas, bukan center */
+}
+
+.case-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.case-hero__logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.case-hero__tags {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* wadah kursor: relatif, tinggi disediain buat nampung posisi tersebar */
+.case-hero__team {
+  position: relative;
+  height: 170px;
+}
+
+.team-cursor {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+/* posisi tersebar, bukan sejajar rapi satu baris — biar kayak beneran
+   kursor kolaborator yang muncul di tempat berbeda-beda (kayak Figma) */
+.team-cursor--1 { top: 0;    left: 0; }
+.team-cursor--2 { top: 30px; left: 300px; }
+.team-cursor--3 { top: 110px; left: 90px; }
+
+.team-cursor svg {
+  display: block;
+  width: 42px;
+  height: 44px;
+}
+
+.team-cursor__tag {
+  position: absolute;
+  left: 24px;
+  top: 30px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  white-space: nowrap; /* lebar ngikutin isi teks, ga ke-crop lagi */
+}
+
+/* warna default (anggota tim selain aku — seragam semua) */
+.team-cursor__tag {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+/* Naurah — hijau (warna aksen project), beda dari anggota tim lain */
+.team-cursor--me .team-cursor__tag {
+  background: var(--project-accent);
+  color: var(--color-white);
+}
+
+.case-hero__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+}
+
+/* gambar nempel ke atas & kanan; kalau tinggi asli gambar bikin section kepanjangan,
+   dipotong (overflow hidden) dan dikasih fade blur di ujung bawah, bukan dipotong kasar */
+.case-hero__media {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  align-self: start;
+  max-height: 640px;
+}
+
+.case-hero__media img {
+  width: 100%;
+  display: block;
+}
+
+.case-hero__media::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
+  pointer-events: none;
+}
+
+/* ------------------------------------------
+   INTRO — info card kiri + gambar kanan
+   tinggi gambar ngikutin tinggi total 3 card
+------------------------------------------ */
+.case-intro {
+  padding: var(--space-16) 0 var(--space-20);
+}
+
+.case-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.case-info-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.case-info-card:last-child {
+  margin-bottom: 0;
+}
+
+.case-info-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.case-info-card__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-3);
+}
+
+.case-info-card__tools {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.case-info-card__tools img,
+.case-info-card__tools svg {
+  width: 32px;
+  height: 32px;
+}
+
+.case-intro__media {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.case-intro__media img {
+  width: 100%;
+  display: block;
+}
+
+/* ------------------------------------------
+   SECTION HEADING (dipakai berulang)
+------------------------------------------ */
+.case-section {
+  padding: var(--space-20) 0;
+}
+
+.case-section--subtle {
+  background: var(--bg-subtle);
+}
+
+.case-section__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.case-section__subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-10);
+}
+
+.case-section__title--left {
+  text-align: left;
+}
+
+.case-section__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-6);
+}
+
+/* ------------------------------------------
+   USER TARGET — teks di tengah, foto orang
+   tersebar di beberapa titik sekitarnya
+------------------------------------------ */
+.user-target {
+  position: relative;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+  padding: var(--space-20) var(--space-16);
+  background: var(--bg-subtle);
+  text-align: center;
+}
+
+.user-target__scope {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-target__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.user-target__title {
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-subheading);
+  letter-spacing: var(--ls-subheading);
+  margin-bottom: var(--space-4);
+}
+
+.user-target__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-lg); /* disamain sama paragraf lain, sebelumnya kegedean */
+  line-height: var(--leading-normal);
+}
+
+.user-target__photo {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.user-target__photo--1 { top: var(--space-8);    left: var(--space-8); }
+.user-target__photo--2 { top: var(--space-8);     right: var(--space-8); }
+.user-target__photo--3 { bottom: -60px; left: 65%; }
+
+@media (max-width: 640px) {
+  .user-target__photo { display: none; } /* di HP disembunyiin biar teks ga ketutup */
+  .user-target { padding: var(--space-10) var(--space-6); }
+}
+
+/* ------------------------------------------
+   PROBLEM QUOTE — buat project yang problem
+   statement-nya 1 pertanyaan besar (HMW), bukan
+   deretan angka statistik
+------------------------------------------ */
+.problem-quote {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  line-height: var(--leading-normal);
+  text-align: center;
+}
+
+/* ------------------------------------------
+   SPLIT GRID — 2 kolom generik (Key Findings /
+   User Needs, dsb)
+------------------------------------------ */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.split-grid__title {
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+/* ------------------------------------------
+   STATS GRID (problem statement)
+   2 kolom: baris 1 = 2 card, baris 2 = 1 card lebar penuh
+------------------------------------------ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.stat-card--wide {
+  grid-column: auto;
+}
+
+.stat-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.stat-card__number {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  color: var(--project-accent);
+  margin-bottom: var(--space-2);
+}
+
+.stat-card__label {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+/* ------------------------------------------
+   INSIGHT LIST (arrow bullets)
+------------------------------------------ */
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.insight-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+.insight-list svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--project-accent);
+  margin-top: 2px;
+}
+
+/* ------------------------------------------
+   PERSONA CARD
+------------------------------------------ */
+.persona-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.persona-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.persona-card__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.persona-card__name {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+}
+
+.persona-card__role {
+  color: var(--project-accent);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.persona-card__label {
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.persona-card__desc {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-6);
+}
+
+.persona-card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.persona-card__grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.persona-card__grid li {
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.persona-card__grid li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--project-accent);
+}
+
+/* ------------------------------------------
+   COMPETITOR ANALYSIS
+------------------------------------------ */
+.competitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.competitor-card {
+  position: relative;
+}
+
+.competitor-card__number {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  font-size: var(--fs-title);
+  font-weight: var(--weight-extrabold);
+  color: var(--bg-subtle);
+  z-index: 0;
+}
+
+.competitor-card__logo {
+  height: 32px;
+  margin-bottom: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.competitor-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  position: relative;
+  z-index: 1;
+}
+
+.competitor-card__list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.competitor-card__list svg {
+  width: 16px;
+  height: 16px;
+  color: var(--project-accent);
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------
+   SOLUTION GRID
+------------------------------------------ */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.solution-card {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.solution-card__title {
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.solution-card__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+/* ------------------------------------------
+   FLOW DIAGRAM
+------------------------------------------ */
+.flow-diagram {
+  margin: var(--space-8) 0 var(--space-12);
+}
+
+.flow-diagram__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-5);
+}
+
+.flow-diagram__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.flow-step {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  background: var(--project-accent);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+.flow-step--outline {
+  background: transparent;
+  border: 1.5px solid var(--project-accent);
+  color: var(--project-accent);
+}
+
+.flow-arrow {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------
+   FEATURE SHOWCASE — gambar + teks selang-seling
+------------------------------------------ */
+.feature-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: center;
+  padding: var(--space-12) 0;
+}
+
+.feature-showcase--reverse .feature-showcase__media {
+  order: 2;
+}
+
+.feature-showcase--reverse .feature-showcase__text {
+  order: 1;
+}
+
+/* Milestone: gambar di bawah teks, bukan sejajar kiri-kanan */
+.feature-showcase--stacked {
+  grid-template-columns: 1fr;
+}
+
+.feature-showcase--stacked .feature-showcase__text {
+  order: 1;
+}
+
+.feature-showcase--stacked .feature-showcase__media {
+  order: 2;
+  justify-content: center; /* biar gambar milestone bener-bener di tengah */
+}
+
+.feature-showcase__media {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: flex-start; /* nempel ke tepi kiri kolomnya */
+}
+
+.feature-showcase--reverse .feature-showcase__media {
+  justify-content: flex-end; /* nempel ke tepi kanan kolomnya */
+}
+
+.feature-showcase__media img {
+  max-height: 420px;
+  border-radius: var(--radius-lg);
+}
+
+.feature-showcase__title {
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-subheading);
+  letter-spacing: var(--ls-subheading);
+  margin-bottom: var(--space-4);
+}
+
+.feature-showcase__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 1.25rem; /* 20px — biar ga kalah sama gambarnya yang gede */
+  line-height: var(--leading-normal);
+}
+
+/* ------------------------------------------
+   REFLECTION
+------------------------------------------ */
+.reflection {
+  padding: var(--space-20) 0;
+  text-align: left;
+}
+
+.reflection__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-5);
+}
+
+.reflection__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin: 0 0 var(--space-4);
+}
+
+/* ------------------------------------------
+   HI-FI GRID — grid screenshot high-fidelity
+------------------------------------------ */
+.hifi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.hifi-grid img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* ------------------------------------------
+   PROJECT NAV — "More Projects" sebelum
+   back-to-home, tampilan cuma cover + judul
+------------------------------------------ */
+.project-nav {
+  padding: var(--space-16) 0 var(--space-12);
+}
+
+.project-nav__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.project-nav__card {
+  display: block;
+  text-align: center;
+}
+
+.project-nav__card img {
+  width: 100%;
+  aspect-ratio: 968 / 632;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.project-nav__card:hover img {
+  transform: scale(1.02);
+}
+
+.project-nav__title {
+  display: block;
+  margin-top: var(--space-3);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .project-nav__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------
+   RESPONSIVE
+------------------------------------------ */
+@media (max-width: 860px) {
+  .case-hero__grid,
+  .case-intro__grid,
+  .persona-card__grid,
+  .feature-showcase,
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-showcase--reverse .feature-showcase__media,
+  .feature-showcase--reverse .feature-showcase__text {
+    order: initial;
+  }
+  .hifi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

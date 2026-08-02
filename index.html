@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naurah Rahadatul Aisyi — UI/UX Designer</title>
+<meta name="description" content="Portofolio Naurah Rahadatul Aisyi, UI/UX Designer & Informatics Student di Universitas Gunadarma.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Abyssinica+SIL&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">Naurah<span>.</span></a>
+
+    <nav class="navbar__links">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="showcase.html" class="navbar__link">Showcase</a>
+      <a href="about.html" class="navbar__link">About</a>
+    </nav>
+
+    <a href="https://linkedin.com/in/naurahaisyi" target="_blank" rel="noopener" class="navbar__cta btn btn--surface btn--sm">
+      <svg class="btn__icon" viewBox="0 0 20 20" fill="currentColor"><path d="M18.52 0H1.48C.66 0 0 .64 0 1.44v17.11C0 19.35.66 20 1.48 20h17.04c.82 0 1.48-.65 1.48-1.44V1.44C20 .64 19.34 0 18.52 0ZM5.93 17.04H2.96V7.5h2.97v9.54ZM4.45 6.2a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.59 10.84h-2.96v-4.64c0-1.11-.02-2.53-1.54-2.53-1.55 0-1.78 1.2-1.78 2.45v4.72H7.8V7.5h2.84v1.3h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.56 1.97 3.56 4.55v5.23Z"/></svg>
+      Get In Touch
+    </a>
+
+    <button class="navbar__toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__tags">
+        <span class="badge badge--color badge--sm">Informatics Student</span>
+        <span class="badge badge--color badge--sm">UI/UX Designer</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="highlight">Hello!</span> I'm Naurah Rahadatul Aisyi, A Passion for Design and Innovation
+      </h1>
+
+      <p class="hero__subtitle">
+        I design digital products grounded in research, systems thinking, and measurable impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT PREVIEW ============ -->
+  <section class="about-preview" id="about">
+    <div class="container about-preview__grid">
+      <div class="reveal">
+        <h2 class="about-preview__title">About <span>Me</span></h2>
+        <p class="about-preview__text">
+          Through academic projects and national competitions, I've worked on digital products spanning education, health-tech, and public systems. My focus is on framing problems clearly, validating ideas through research, and translating insight into design solutions that are both intuitive and measurable.
+        </p>
+        <p class="about-preview__text">
+          I'm especially interested in how data, usability testing, and systems thinking can shape better product decisions.
+        </p>
+        <a href="assets/CV_Naurah_Rahadatul_Aisyi.pdf" target="_blank" class="btn btn--outline btn--md">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Get My CV
+        </a>
+      </div>
+
+      <div class="about-preview__photo reveal">
+        <img class="about-preview__deco about-preview__deco--large" src="assets/profile/deco-crystal-large.svg" alt="">
+        <img class="about-preview__deco about-preview__deco--small" src="assets/profile/deco-crystal-small.svg" alt="">
+
+        <div class="about-preview__avatar">
+          <div class="about-preview__photo-frame">
+            <img src="assets/profile/photo.jpeg" alt="Foto Naurah Rahadatul Aisyi">
+          </div>
+          <img class="about-preview__badge" src="assets/profile/verified-tick.svg" alt="Verified badge">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOP PROJECTS ============ -->
+  <section class="projects section--subtle" id="projects">
+    <div class="container">
+      <div class="projects__header reveal">
+        <h2 class="projects__title"><span class="badge-word">My</span> top listed chosen projects</h2>
+        <a href="showcase.html" class="btn btn--primary btn--md">
+          More Projects
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="projects__carousel-wrap reveal">
+        <button type="button" class="projects__arrow projects__arrow--prev" aria-label="Previous project">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="projects__arrow projects__arrow--next" aria-label="Next project">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="projects__carousel">
+
+          <a href="lumora.html" class="project-card project-card--lumora">
+            <img class="project-card__image" src="assets/projects/lumora/lumora-card.png" alt="Lumora app preview">
+            <span class="project-card__go">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <span class="project-card__body">
+              <span class="project-card__name">Lumora</span>
+              <span class="project-card__desc">An AI-powered mobile app that uses adaptive articulation training and phoneme analysis to help children with Down syndrome build communication skills.</span>
+            </span>
+          </a>
+
+          <a href="career.html" class="project-card project-card--career">
+            <img class="project-card__image" src="assets/projects/career/career-card.png" alt="Career app preview">
+            <span class="project-card__go">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <span class="project-card__body">
+              <span class="project-card__name">Career</span>
+              <span class="project-card__desc">A project-based career platform that bridges academic learning with real industry skills through guided milestones and portfolio building.</span>
+            </span>
+          </a>
+
+          <a href="glucocheck.html" class="project-card project-card--gluco">
+            <img class="project-card__image" src="assets/projects/glucocheck/glucocheck-card.png" alt="GlucoCheck app preview">
+            <span class="project-card__go">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <span class="project-card__body">
+              <span class="project-card__name">GlucoCheck</span>
+              <span class="project-card__desc">A smart healthcare application designed to help users monitor and manage diabetes risk through AI-driven insights and personalized tracking.</span>
+            </span>
+          </a>
+
+          <a href="sivitas.html" class="project-card project-card--sivitas">
+            <img class="project-card__image" src="assets/projects/sivitas/sivitas-card.png" alt="SiviTas app preview">
+            <span class="project-card__go">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
+            <span class="project-card__body">
+              <span class="project-card__name">SiviTas</span>
+              <span class="project-card__desc">A digital campus ecosystem that connects students with events, organizations, and trending university activities.</span>
+            </span>
+          </a>
+
+        </div>
+        <div class="projects__dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLBOX ============ -->
+  <section class="toolbox">
+    <div class="container">
+      <h2 class="toolbox__title reveal">Design &amp; Development <span class="text-accent">Toolbox</span></h2>
+      <p class="toolbox__subtitle reveal">A comprehensive suite of tools that I use to design, prototype, and bring ideas to life</p>
+    </div>
+
+    <div class="toolbox__marquee reveal">
+      <div class="toolbox__track">
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 38 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.34 56c5.15 0 9.33-4.18 9.33-9.33v-9.34H9.34C4.18 37.33 0 41.52 0 46.67 0 51.82 4.18 56 9.34 56Z" fill="#0ACF83"/>
+              <path d="M0 28c0-5.15 4.18-9.33 9.33-9.33h9.33V37.3H9.33C4.18 37.3 0 33.15 0 28Z" fill="#A259FF"/>
+              <path d="M0 9.33C0 4.18 4.18 0 9.33 0h9.33v18.67H9.33C4.18 18.67 0 14.49 0 9.33Z" fill="#F24E1E"/>
+              <path d="M18.67 0h9.33c5.15 0 9.33 4.18 9.33 9.33 0 5.15-4.18 9.33-9.33 9.33h-9.33V0Z" fill="#FF7262"/>
+              <path d="M37.33 28c0 5.15-4.18 9.33-9.33 9.33S18.67 33.15 18.67 28c0-5.15 4.18-9.33 9.33-9.33s9.33 4.18 9.33 9.33Z" fill="#1ABCFE"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Figma</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M29.695 0.076C29.453 0.1 28.697 0.19 28.031 0.27C25.344 0.576 22.297 1.383 19.623 2.51C9.945 6.553 2.662 15.424 0.652 25.6C0.179 28.02 0.064 29.209 0.064 32C0.064 35.598 0.422 38.08 1.369 41.217C4.467 51.482 12.531 59.533 22.823 62.643C25.92 63.578 28.416 63.936 32 63.936C35.598 63.936 38.08 63.578 41.217 62.631C51.482 59.533 59.533 51.469 62.643 41.178C63.578 38.08 63.936 35.584 63.936 32C63.936 30.477 63.86 28.737 63.77 28.096C62.733 20.698 59.686 14.477 54.606 9.395C49.535 4.352 43.34 1.293 36.095 0.256C35.097 0.115 30.476 -0.014 29.695 0.076Z" fill="#00C4CC"/>
+              <path d="M19.264 20.236C19.944 20.441 20.262 20.633 20.723 21.094C21.619 22.004 21.824 22.502 21.824 23.871C21.824 24.897 21.785 25.088 21.479 25.625C20.889 26.623 19.52 27.545 18.573 27.57C17.906 27.584 17.934 27.289 18.663 26.522C19.635 25.51 19.776 25.127 19.776 23.615C19.764 22.157 19.584 21.658 18.906 21.248C18.342 20.903 17.729 20.928 16.833 21.35C14.503 22.465 11.981 26.176 10.996 29.979C9.69 35.047 12.006 39.104 15.82 38.412C16.934 38.207 19.033 37.133 19.944 36.287C20.698 35.598 20.698 35.584 20.774 34.727C20.942 32.934 22.207 31.143 23.899 30.311C24.678 29.926 24.871 29.889 25.92 29.889C26.918 29.889 27.149 29.94 27.635 30.207C29.184 31.092 28.864 33.152 27.188 33.152C26.215 33.152 25.715 32.652 26.42 32.385C27.112 32.129 26.854 31.168 26.049 30.951C25.102 30.707 24.026 31.348 23.348 32.576C22.528 34.061 22.49 35.828 23.27 36.633C24.026 37.44 24.973 36.801 25.703 34.969C26.086 34.035 26.637 33.535 27.278 33.535C27.84 33.535 27.944 33.881 27.699 34.932C27.34 36.557 27.584 36.979 28.596 36.48C28.928 36.326 29.479 35.969 29.811 35.713L30.438 35.213L30.862 32.998C31.323 30.516 31.5 30.182 32.448 30.004C33.358 29.836 33.563 30.285 33.229 31.705L33.049 32.5L33.715 31.82C35.289 30.207 37.223 29.414 37.889 30.08C38.246 30.438 38.207 30.887 37.696 32.473C37.453 33.229 37.119 34.42 36.967 35.098C36.737 36.121 36.723 36.365 36.852 36.531C37.262 37.018 38.516 36.518 39.629 35.43L40.282 34.791L40.36 33.369C40.436 31.73 40.588 31.143 41.024 30.617C41.434 30.131 42.176 29.773 42.573 29.875C42.969 29.979 42.969 30.361 42.612 31.488C42.112 33.037 42.164 36.607 42.676 36.607C42.881 36.607 43.93 35.508 44.596 34.586L45.094 33.906L44.698 33.498C44.006 32.768 43.84 32.295 43.84 31.104C43.84 30.234 43.905 29.914 44.121 29.49C44.481 28.826 45.043 28.34 45.709 28.146C46.412 27.93 47.283 28.287 47.641 28.928C48 29.58 47.911 31.039 47.449 32.039L47.117 32.768H47.565C48.18 32.768 48.422 32.615 49.524 31.578C50.1 31.027 50.766 30.553 51.264 30.322C53.223 29.402 55.528 29.875 55.91 31.283C56.23 32.41 55.528 33.203 54.297 33.113C53.414 33.049 53.248 32.818 53.76 32.385C54.682 31.615 53.76 30.631 52.442 30.988C51.725 31.182 50.918 31.986 50.497 32.922C49.65 34.791 50.1 36.992 51.315 36.992C51.801 36.992 52.66 36.031 52.992 35.098C53.389 34.021 54.221 33.344 54.848 33.588C55.194 33.715 55.219 34.061 55.002 35.148C54.758 36.34 54.721 37.453 54.912 37.965C54.988 38.156 55.219 38.516 55.437 38.758C55.845 39.219 55.86 39.385 55.514 39.604C55.348 39.719 55.129 39.668 54.592 39.373C53.85 38.988 53.209 38.297 52.979 37.645L52.838 37.262L52.326 37.645C52.031 37.85 51.57 38.08 51.303 38.156C50.24 38.438 48.934 37.709 48.32 36.48C48.076 36.006 48 34.611 48.18 34.074C48.281 33.779 48.281 33.779 47.871 33.984C47.654 34.1 47.194 34.227 46.836 34.266C46.246 34.33 46.156 34.395 45.568 35.137C44.737 36.172 43.264 37.568 42.662 37.863C41.383 38.502 40.961 38.322 40.627 37.004L40.396 36.121L39.846 36.607C39.143 37.223 37.735 37.965 36.927 38.145C36.16 38.311 35.34 38.066 35.007 37.555C34.51 36.787 34.676 35.162 35.469 32.973C36.057 31.348 35.635 31.322 34.15 32.871C33.049 34.035 32.576 34.867 32.269 36.16C31.949 37.504 31.564 37.99 30.695 38.195C30.17 38.311 29.926 37.99 30.029 37.287L30.105 36.723L29.619 37.057C28.928 37.529 28.057 37.965 27.455 38.131C26.854 38.297 26.06 38.119 25.869 37.785C25.523 37.197 25.523 37.197 24.986 37.619C23.82 38.566 22.157 38.297 21.313 37.043L21.043 36.646L20.199 37.428C17.766 39.654 14.721 40.652 12.467 39.961C9.599 39.092 8.013 36.633 8.039 33.088C8.051 29.529 9.625 25.779 12.276 23.002C13.773 21.439 15.181 20.518 16.615 20.172C17.651 19.916 18.28 19.928 19.264 20.236Z" fill="white"/>
+              <path d="M45.209 29.338C44.927 29.619 45.031 30.746 45.389 31.463C45.568 31.834 45.76 32.129 45.824 32.129C45.875 32.129 45.99 31.834 46.08 31.475C46.4 30.145 45.824 28.723 45.209 29.338Z" fill="white"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Canva</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="" width="32" height="32">
+          </span>
+          <span class="tool-card__name">Notion</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 22.67 49.33 40H32v17.33L14.67 40V22.67H32ZM32 22.67 14.67 5.33h34.66v17.34H32Z" stroke="#282D46" stroke-width="4"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Framer</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M61.736 6.91 48.549.56a3.94 3.94 0 0 0-4.398.662L1.331 40.694a1.955 1.955 0 0 0 .05 2.943l3.526 3.205c.86.696 2.1.745 3.014.132L59.75 8.556c1.744-1.323 4.25-.079 4.25 2.11V10.5a3.95 3.95 0 0 0-2.264-3.59Z" fill="#0065A9"/>
+              <path d="M61.736 57.09 48.549 63.44a3.94 3.94 0 0 1-4.398-.662L1.331 23.306a1.955 1.955 0 0 1 .05-2.943l3.526-3.205c.86-.696 2.1-.745 3.014-.132L59.75 55.443c1.744 1.323 4.25.079 4.25-2.11v.153a3.95 3.95 0 0 1-2.264 3.59Z" fill="#007ACC"/>
+              <path d="M48.549 63.44a3.94 3.94 0 0 1-4.398-.774c1.476 1.475 4-.43 4-2.517V2.99C48.151.902 45.626-.143 44.15 1.333a3.94 3.94 0 0 1 4.398-.774l13.184 6.34a3.94 3.94 0 0 1 2.264 3.59v42.99a3.94 3.94 0 0 1-2.264 3.59l-13.184 6.37Z" fill="#1F9CF0"/>
+              <path opacity=".25" d="M45.345 63.563a3.9 3.9 0 0 0 3.174.27l13.177-6.34a3.9 3.9 0 0 0 2.265-3.586V10.505a3.9 3.9 0 0 0-2.265-3.586L48.52.561a3.9 3.9 0 0 0-4.397.662L18.748 24.347 7.761 16.007a1.95 1.95 0 0 0-2.409.16l-3.518 3.196a1.955 1.955 0 0 0-.05 2.944l9.575 8.693-9.528 8.693a1.955 1.955 0 0 0 .05 2.944l3.518 3.205c.86.696 2.1.745 3.015.132l10.986-8.341 25.225 23.013a3.9 3.9 0 0 0 2.222 1Zm2.626-46.092L28.831 32l19.14 14.53V17.47Z" fill="#fff"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">VS Code</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.25 0H57.75C61.2125 0 64 2.7875 64 6.25V57.75C64 61.2125 61.2125 64 57.75 64H6.25C2.7875 64 0 61.2125 0 57.75V6.25C0 2.7875 2.7875 0 6.25 0Z" fill="url(#trello-gradient-1)"/>
+              <path d="M39.1599 8.32007H52.6799C54.3419 8.32007 55.6799 9.65807 55.6799 11.3201V33.3201C55.6799 34.9821 54.3419 36.3201 52.6799 36.3201H39.1599C37.4979 36.3201 36.1599 34.9821 36.1599 33.3201V11.3201C36.1599 9.65807 37.4979 8.32007 39.1599 8.32007ZM11.3199 8.32007H24.8399C26.5019 8.32007 27.8399 9.65807 27.8399 11.3201V49.3201C27.8399 50.9821 26.5019 52.3201 24.8399 52.3201H11.3199C9.65795 52.3201 8.31995 50.9821 8.31995 49.3201V11.3201C8.31995 9.65807 9.65795 8.32007 11.3199 8.32007Z" fill="white"/>
+              <defs>
+                <linearGradient id="trello-gradient-1" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2684FF"/>
+                  <stop offset="1" stop-color="#0052CC"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tool-card__name">Trello</span>
+        </div>
+
+        <!-- set kedua: duplikat persis, dibungkus display:contents biar tetep 1 flex row (buat animasi -50% mulus) tapi disembunyikan dari screen reader -->
+        <div aria-hidden="true" style="display:contents">
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 38 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.34 56c5.15 0 9.33-4.18 9.33-9.33v-9.34H9.34C4.18 37.33 0 41.52 0 46.67 0 51.82 4.18 56 9.34 56Z" fill="#0ACF83"/>
+              <path d="M0 28c0-5.15 4.18-9.33 9.33-9.33h9.33V37.3H9.33C4.18 37.3 0 33.15 0 28Z" fill="#A259FF"/>
+              <path d="M0 9.33C0 4.18 4.18 0 9.33 0h9.33v18.67H9.33C4.18 18.67 0 14.49 0 9.33Z" fill="#F24E1E"/>
+              <path d="M18.67 0h9.33c5.15 0 9.33 4.18 9.33 9.33 0 5.15-4.18 9.33-9.33 9.33h-9.33V0Z" fill="#FF7262"/>
+              <path d="M37.33 28c0 5.15-4.18 9.33-9.33 9.33S18.67 33.15 18.67 28c0-5.15 4.18-9.33 9.33-9.33s9.33 4.18 9.33 9.33Z" fill="#1ABCFE"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Figma</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M29.695 0.076C29.453 0.1 28.697 0.19 28.031 0.27C25.344 0.576 22.297 1.383 19.623 2.51C9.945 6.553 2.662 15.424 0.652 25.6C0.179 28.02 0.064 29.209 0.064 32C0.064 35.598 0.422 38.08 1.369 41.217C4.467 51.482 12.531 59.533 22.823 62.643C25.92 63.578 28.416 63.936 32 63.936C35.598 63.936 38.08 63.578 41.217 62.631C51.482 59.533 59.533 51.469 62.643 41.178C63.578 38.08 63.936 35.584 63.936 32C63.936 30.477 63.86 28.737 63.77 28.096C62.733 20.698 59.686 14.477 54.606 9.395C49.535 4.352 43.34 1.293 36.095 0.256C35.097 0.115 30.476 -0.014 29.695 0.076Z" fill="#00C4CC"/>
+              <path d="M19.264 20.236C19.944 20.441 20.262 20.633 20.723 21.094C21.619 22.004 21.824 22.502 21.824 23.871C21.824 24.897 21.785 25.088 21.479 25.625C20.889 26.623 19.52 27.545 18.573 27.57C17.906 27.584 17.934 27.289 18.663 26.522C19.635 25.51 19.776 25.127 19.776 23.615C19.764 22.157 19.584 21.658 18.906 21.248C18.342 20.903 17.729 20.928 16.833 21.35C14.503 22.465 11.981 26.176 10.996 29.979C9.69 35.047 12.006 39.104 15.82 38.412C16.934 38.207 19.033 37.133 19.944 36.287C20.698 35.598 20.698 35.584 20.774 34.727C20.942 32.934 22.207 31.143 23.899 30.311C24.678 29.926 24.871 29.889 25.92 29.889C26.918 29.889 27.149 29.94 27.635 30.207C29.184 31.092 28.864 33.152 27.188 33.152C26.215 33.152 25.715 32.652 26.42 32.385C27.112 32.129 26.854 31.168 26.049 30.951C25.102 30.707 24.026 31.348 23.348 32.576C22.528 34.061 22.49 35.828 23.27 36.633C24.026 37.44 24.973 36.801 25.703 34.969C26.086 34.035 26.637 33.535 27.278 33.535C27.84 33.535 27.944 33.881 27.699 34.932C27.34 36.557 27.584 36.979 28.596 36.48C28.928 36.326 29.479 35.969 29.811 35.713L30.438 35.213L30.862 32.998C31.323 30.516 31.5 30.182 32.448 30.004C33.358 29.836 33.563 30.285 33.229 31.705L33.049 32.5L33.715 31.82C35.289 30.207 37.223 29.414 37.889 30.08C38.246 30.438 38.207 30.887 37.696 32.473C37.453 33.229 37.119 34.42 36.967 35.098C36.737 36.121 36.723 36.365 36.852 36.531C37.262 37.018 38.516 36.518 39.629 35.43L40.282 34.791L40.36 33.369C40.436 31.73 40.588 31.143 41.024 30.617C41.434 30.131 42.176 29.773 42.573 29.875C42.969 29.979 42.969 30.361 42.612 31.488C42.112 33.037 42.164 36.607 42.676 36.607C42.881 36.607 43.93 35.508 44.596 34.586L45.094 33.906L44.698 33.498C44.006 32.768 43.84 32.295 43.84 31.104C43.84 30.234 43.905 29.914 44.121 29.49C44.481 28.826 45.043 28.34 45.709 28.146C46.412 27.93 47.283 28.287 47.641 28.928C48 29.58 47.911 31.039 47.449 32.039L47.117 32.768H47.565C48.18 32.768 48.422 32.615 49.524 31.578C50.1 31.027 50.766 30.553 51.264 30.322C53.223 29.402 55.528 29.875 55.91 31.283C56.23 32.41 55.528 33.203 54.297 33.113C53.414 33.049 53.248 32.818 53.76 32.385C54.682 31.615 53.76 30.631 52.442 30.988C51.725 31.182 50.918 31.986 50.497 32.922C49.65 34.791 50.1 36.992 51.315 36.992C51.801 36.992 52.66 36.031 52.992 35.098C53.389 34.021 54.221 33.344 54.848 33.588C55.194 33.715 55.219 34.061 55.002 35.148C54.758 36.34 54.721 37.453 54.912 37.965C54.988 38.156 55.219 38.516 55.437 38.758C55.845 39.219 55.86 39.385 55.514 39.604C55.348 39.719 55.129 39.668 54.592 39.373C53.85 38.988 53.209 38.297 52.979 37.645L52.838 37.262L52.326 37.645C52.031 37.85 51.57 38.08 51.303 38.156C50.24 38.438 48.934 37.709 48.32 36.48C48.076 36.006 48 34.611 48.18 34.074C48.281 33.779 48.281 33.779 47.871 33.984C47.654 34.1 47.194 34.227 46.836 34.266C46.246 34.33 46.156 34.395 45.568 35.137C44.737 36.172 43.264 37.568 42.662 37.863C41.383 38.502 40.961 38.322 40.627 37.004L40.396 36.121L39.846 36.607C39.143 37.223 37.735 37.965 36.927 38.145C36.16 38.311 35.34 38.066 35.007 37.555C34.51 36.787 34.676 35.162 35.469 32.973C36.057 31.348 35.635 31.322 34.15 32.871C33.049 34.035 32.576 34.867 32.269 36.16C31.949 37.504 31.564 37.99 30.695 38.195C30.17 38.311 29.926 37.99 30.029 37.287L30.105 36.723L29.619 37.057C28.928 37.529 28.057 37.965 27.455 38.131C26.854 38.297 26.06 38.119 25.869 37.785C25.523 37.197 25.523 37.197 24.986 37.619C23.82 38.566 22.157 38.297 21.313 37.043L21.043 36.646L20.199 37.428C17.766 39.654 14.721 40.652 12.467 39.961C9.599 39.092 8.013 36.633 8.039 33.088C8.051 29.529 9.625 25.779 12.276 23.002C13.773 21.439 15.181 20.518 16.615 20.172C17.651 19.916 18.28 19.928 19.264 20.236Z" fill="white"/>
+              <path d="M45.209 29.338C44.927 29.619 45.031 30.746 45.389 31.463C45.568 31.834 45.76 32.129 45.824 32.129C45.875 32.129 45.99 31.834 46.08 31.475C46.4 30.145 45.824 28.723 45.209 29.338Z" fill="white"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Canva</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="" width="32" height="32">
+          </span>
+          <span class="tool-card__name">Notion</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 22.67 49.33 40H32v17.33L14.67 40V22.67H32ZM32 22.67 14.67 5.33h34.66v17.34H32Z" stroke="#282D46" stroke-width="4"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">Framer</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M61.736 6.91 48.549.56a3.94 3.94 0 0 0-4.398.662L1.331 40.694a1.955 1.955 0 0 0 .05 2.943l3.526 3.205c.86.696 2.1.745 3.014.132L59.75 8.556c1.744-1.323 4.25-.079 4.25 2.11V10.5a3.95 3.95 0 0 0-2.264-3.59Z" fill="#0065A9"/>
+              <path d="M61.736 57.09 48.549 63.44a3.94 3.94 0 0 1-4.398-.662L1.331 23.306a1.955 1.955 0 0 1 .05-2.943l3.526-3.205c.86-.696 2.1-.745 3.014-.132L59.75 55.443c1.744 1.323 4.25.079 4.25-2.11v.153a3.95 3.95 0 0 1-2.264 3.59Z" fill="#007ACC"/>
+              <path d="M48.549 63.44a3.94 3.94 0 0 1-4.398-.774c1.476 1.475 4-.43 4-2.517V2.99C48.151.902 45.626-.143 44.15 1.333a3.94 3.94 0 0 1 4.398-.774l13.184 6.34a3.94 3.94 0 0 1 2.264 3.59v42.99a3.94 3.94 0 0 1-2.264 3.59l-13.184 6.37Z" fill="#1F9CF0"/>
+              <path opacity=".25" d="M45.345 63.563a3.9 3.9 0 0 0 3.174.27l13.177-6.34a3.9 3.9 0 0 0 2.265-3.586V10.505a3.9 3.9 0 0 0-2.265-3.586L48.52.561a3.9 3.9 0 0 0-4.397.662L18.748 24.347 7.761 16.007a1.95 1.95 0 0 0-2.409.16l-3.518 3.196a1.955 1.955 0 0 0-.05 2.944l9.575 8.693-9.528 8.693a1.955 1.955 0 0 0 .05 2.944l3.518 3.205c.86.696 2.1.745 3.015.132l10.986-8.341 25.225 23.013a3.9 3.9 0 0 0 2.222 1Zm2.626-46.092L28.831 32l19.14 14.53V17.47Z" fill="#fff"/>
+            </svg>
+          </span>
+          <span class="tool-card__name">VS Code</span>
+        </div>
+
+        <div class="tool-card">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.25 0H57.75C61.2125 0 64 2.7875 64 6.25V57.75C64 61.2125 61.2125 64 57.75 64H6.25C2.7875 64 0 61.2125 0 57.75V6.25C0 2.7875 2.7875 0 6.25 0Z" fill="url(#trello-gradient-2)"/>
+              <path d="M39.1599 8.32007H52.6799C54.3419 8.32007 55.6799 9.65807 55.6799 11.3201V33.3201C55.6799 34.9821 54.3419 36.3201 52.6799 36.3201H39.1599C37.4979 36.3201 36.1599 34.9821 36.1599 33.3201V11.3201C36.1599 9.65807 37.4979 8.32007 39.1599 8.32007ZM11.3199 8.32007H24.8399C26.5019 8.32007 27.8399 9.65807 27.8399 11.3201V49.3201C27.8399 50.9821 26.5019 52.3201 24.8399 52.3201H11.3199C9.65795 52.3201 8.31995 50.9821 8.31995 49.3201V11.3201C8.31995 9.65807 9.65795 8.32007 11.3199 8.32007Z" fill="white"/>
+              <defs>
+                <linearGradient id="trello-gradient-2" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2684FF"/>
+                  <stop offset="1" stop-color="#0052CC"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="tool-card__name">Trello</span>
+        </div>
+
+        </div><!-- /display:contents (set kedua) -->
+      </div><!-- /toolbox__track -->
+    </div><!-- /toolbox__marquee -->
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<!-- ============ CONNECT ============ -->
+<section class="connect">
+  <div class="container">
+    <div class="connect__frame">
+      <h2 class="connect__title">Let's Stay <span class="text-accent">Connected</span></h2>
+      <p class="connect__subtitle">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+      <div class="connect__grid">
+        <a href="mailto:naurahaisyi75@gmail.com" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">Email</span>
+            <span class="connect__card-value">naurahaisyi75@gmail.com</span>
+          </span>
+        </a>
+
+        <a href="https://linkedin.com/in/naurahaisyi" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">LinkedIn</span>
+            <span class="connect__card-value">/in/naurahaisyi</span>
+          </span>
+        </a>
+
+        <a href="https://github.com/naurahraa" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">GitHub</span>
+            <span class="connect__card-value">@naurahraa</span>
+          </span>
+        </a>
+
+        <a href="https://www.instagram.com/naurahraa" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">Instagram</span>
+            <span class="connect__card-value">@naurahraa</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER BAR ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__logo">Naurah<span>.</span></span>
+    <p class="footer__copyright">©Naurah 2026. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
