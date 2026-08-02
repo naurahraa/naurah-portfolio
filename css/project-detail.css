@@ -971,6 +971,108 @@
 }
 
 /* ------------------------------------------
+   PROJECTS GRID — versi statis (bukan carousel)
+   dari .project-card homepage, dipakai di
+   projects.html
+------------------------------------------ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.projects-grid .project-card {
+  flex: none;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------
+   PROJECT LIST — kartu horizontal buat
+   projects.html, sengaja beda dari poster card
+   homepage: teks selalu keliatan, ga perlu hover
+------------------------------------------ */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.project-list-card {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: box-shadow var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+}
+
+.project-list-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--border-default);
+}
+
+.project-list-card__image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 968 / 632;
+  object-fit: cover;
+  display: block;
+}
+
+.project-list-card__content {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.project-list-card__title {
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-subheading);
+  letter-spacing: var(--ls-subheading);
+}
+
+.project-list-card__desc {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+.project-list-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+  margin-top: var(--space-2);
+}
+
+.project-list-card__link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.project-list-card:hover .project-list-card__link svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 720px) {
+  .project-list-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------
    RESPONSIVE
 ------------------------------------------ */
 @media (max-width: 860px) {
