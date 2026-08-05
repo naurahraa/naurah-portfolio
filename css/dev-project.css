@@ -1,0 +1,428 @@
+/* ============================================
+   DEV PROJECT PAGE — sengaja beda dari
+   case-study UI/UX (project-detail.css)
+   ============================================ */
+
+.theme-azzam {
+  --project-accent: var(--color-primary);
+}
+
+/* ------------------------------------------
+   HERO — full-bleed dark, tags monospace,
+   ada tombol "Visit Live Site"
+------------------------------------------ */
+.dev-hero {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: var(--space-24) 0 var(--space-16);
+  text-align: center;
+}
+
+.dev-hero__tags {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.dev-hero__tag {
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+}
+
+.dev-hero__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  max-width: 780px;
+  margin: 0 auto var(--space-5);
+}
+
+.dev-hero__subtitle {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 780px;
+  margin: 0 auto var(--space-8);
+}
+
+.dev-hero__meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  padding-top: var(--space-8);
+  margin-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dev-hero__meta-item {
+  text-align: left;
+}
+
+.dev-hero__meta-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.dev-hero__meta-value {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+}
+
+/* ------------------------------------------
+   BROWSER FRAME — screenshot yang bisa diklik,
+   ngarah ke live site
+------------------------------------------ */
+.browser-frame {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+.browser-frame:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    var(--shadow-lg),
+    0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.browser-frame__bar {
+  background: #e8e8ea;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.browser-frame__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-frame__dot--red {
+  background: #ff5f57;
+}
+.browser-frame__dot--yellow {
+  background: #febc2e;
+}
+.browser-frame__dot--green {
+  background: #28c840;
+}
+
+.browser-frame__url {
+  margin-left: var(--space-3);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-4);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.browser-frame img {
+  width: 100%;
+  display: block;
+}
+
+.browser-frame-caption {
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  margin-top: var(--space-4);
+}
+
+.browser-frame-caption a {
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+
+/* ------------------------------------------
+   NUMBERED SECTIONS — 01 / 02 / 03 dst,
+   biar berasa dokumentasi teknis, bukan case study
+------------------------------------------ */
+.dev-section {
+  padding: var(--space-16) 0;
+}
+
+.dev-section__num {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.dev-section__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-5);
+}
+
+.dev-section__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-4);
+}
+
+/* ------------------------------------------
+   PROBLEM LIST — nomor kotak, bukan panah
+------------------------------------------ */
+.dev-problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.dev-problem-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: var(--space-5);
+  background: var(--bg-subtle);
+  border-radius: var(--radius-md);
+}
+
+.dev-problem-item__num {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.dev-problem-item__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+/* ------------------------------------------
+   TECH STACK — badge monospace
+------------------------------------------ */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.tech-badge {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+/* ------------------------------------------
+   FEATURE LIST — nomor besar di belakang,
+   bukan card kotak putih standar
+------------------------------------------ */
+.dev-feature-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-feature-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dev-feature-item:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dev-feature-item__num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--fs-subheading);
+  font-weight: var(--weight-bold);
+  color: var(--border-default);
+}
+
+.dev-feature-item__title {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.dev-feature-item__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+/* ------------------------------------------
+   CHATBOT SPOTLIGHT — sorotan fitur AI chatbot
+------------------------------------------ */
+.chatbot-spotlight {
+  background: var(--color-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  color: var(--color-white);
+}
+
+.chatbot-spotlight__title {
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-subheading);
+  letter-spacing: var(--ls-subheading);
+  margin-bottom: var(--space-4);
+}
+
+.chatbot-spotlight__text {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-6);
+}
+
+.chatbot-example {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 480px;
+}
+
+.chatbot-example__bubble {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-sm);
+  color: #7dd3fc;
+}
+
+.chatbot-example__bubble::before {
+  content: "> ";
+  color: var(--color-primary);
+}
+
+.chatbot-spotlight__grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.chatbot-spotlight__image {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius-lg);
+  justify-self: end;
+}
+
+@media (max-width: 720px) {
+  .chatbot-spotlight__grid {
+    grid-template-columns: 1fr;
+  }
+  .chatbot-spotlight__image {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
+
+/* ------------------------------------------
+   REFLECTION
+------------------------------------------ */
+.dev-reflection {
+  padding: var(--space-16) 0;
+  text-align: left;
+}
+
+.dev-reflection__title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-5);
+}
+
+.dev-reflection__text {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-4);
+}
+
+/* ------------------------------------------
+   SCREEN CAROUSEL — auto-slide tiap beberapa
+   detik, buat section "A Closer Look"
+------------------------------------------ */
+.screen-carousel {
+  position: relative;
+}
+
+.screen-carousel__track {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 1897 / 1078;
+  background: var(--bg-subtle);
+}
+
+.screen-carousel__track img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.screen-carousel__track img.is-active {
+  opacity: 1;
+}
+
+.screen-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.screen-carousel__dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-default);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    width var(--duration-fast) var(--ease-out);
+}
+
+.screen-carousel__dots button.is-active {
+  background: var(--color-primary);
+  width: 22px;
+  border-radius: var(--radius-full);
+}
+
+/* ------------------------------------------
+   RESPONSIVE
+------------------------------------------ */
+@media (max-width: 640px) {
+  .dev-feature-item {
+    grid-template-columns: 1fr;
+  }
+  .dev-hero__meta {
+    justify-content: flex-start;
+  }
+}

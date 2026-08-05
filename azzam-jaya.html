@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azzam Jaya — Naurah Rahadatul Aisyi</title>
+<meta name="description" content="Pembuatan Website Penjualan Seragam Sekolah dengan Fitur Chatbot AI Rekomendasi Ukuran pada Toko Azzam Jaya.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Abyssinica+SIL&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/dev-project.css">
+</head>
+<body class="theme-azzam">
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">Naurah<span>.</span></a>
+
+    <nav class="navbar__links">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="showcase.html" class="navbar__link">Showcase</a>
+      <a href="projects.html" class="navbar__link">Projects</a>
+      <a href="about.html" class="navbar__link">About</a>
+    </nav>
+
+    <a href="https://linkedin.com/in/naurahaisyi" target="_blank" rel="noopener" class="navbar__cta btn btn--surface btn--sm">
+      <svg class="btn__icon" viewBox="0 0 20 20" fill="currentColor"><path d="M18.52 0H1.48C.66 0 0 .64 0 1.44v17.11C0 19.35.66 20 1.48 20h17.04c.82 0 1.48-.65 1.48-1.44V1.44C20 .64 19.34 0 18.52 0ZM5.93 17.04H2.96V7.5h2.97v9.54ZM4.45 6.2a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.59 10.84h-2.96v-4.64c0-1.11-.02-2.53-1.54-2.53-1.55 0-1.78 1.2-1.78 2.45v4.72H7.8V7.5h2.84v1.3h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.56 1.97 3.56 4.55v5.23Z"/></svg>
+      Get In Touch
+    </a>
+
+    <button class="navbar__toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="dev-hero">
+    <div class="container">
+      <div class="dev-hero__tags">
+        <span class="dev-hero__tag">development-project</span>
+        <span class="dev-hero__tag">laravel</span>
+        <span class="dev-hero__tag">rag-chatbot</span>
+      </div>
+      <h1 class="dev-hero__title">School Uniform Sales Website with an AI Size-Recommendation Chatbot</h1>
+      <p class="dev-hero__subtitle">Built for Toko Azzam Jaya, a family-run school uniform store in Jakarta digitizing over 30 years of manual retail operations.</p>
+
+      <div class="dev-hero__meta">
+        <div class="dev-hero__meta-item">
+          <div class="dev-hero__meta-label">Role</div>
+          <div class="dev-hero__meta-value">Full-Stack Developer (Solo)</div>
+        </div>
+        <div class="dev-hero__meta-item">
+          <div class="dev-hero__meta-label">Type</div>
+          <div class="dev-hero__meta-value">Penulisan Ilmiah (PI)</div>
+        </div>
+        <div class="dev-hero__meta-item">
+          <div class="dev-hero__meta-label">Year</div>
+          <div class="dev-hero__meta-value">2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE PREVIEW ============ -->
+  <section class="dev-section" style="border-top: none; padding-top: var(--space-16);">
+    <div class="container">
+      <a href="https://azzamjaya.id/" target="_blank" rel="noopener" class="browser-frame">
+        <span class="browser-frame__bar">
+          <span class="browser-frame__dot browser-frame__dot--red"></span>
+          <span class="browser-frame__dot browser-frame__dot--yellow"></span>
+          <span class="browser-frame__dot browser-frame__dot--green"></span>
+          <span class="browser-frame__url">azzamjaya.id</span>
+        </span>
+        <img src="assets/projects/azzam-jaya/azzam-hero.png" alt="Azzam Jaya website homepage">
+      </a>
+      <p class="browser-frame-caption">Click the preview above to open <a href="https://azzamjaya.id/" target="_blank" rel="noopener">azzamjaya.id</a> in a new tab.</p>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">01 — Overview</span>
+      <h2 class="dev-section__title">What Is This Project?</h2>
+      <p class="dev-section__text">This is my Penulisan Ilmiah (PI), a mandatory supervised research course at Gunadarma University with its own final defense (sidang), typically taken from semester 6 onward: a full-stack web application built for Toko Azzam Jaya, a school uniform retailer in Jakarta that has operated for more than 30 years using entirely manual stock and transaction records.</p>
+      <p class="dev-section__text">The system gives the store owner real-time stock and sales management, gives customers an online catalog and ordering flow, and includes an AI chatbot that helps customers figure out the right uniform size before they buy.</p>
+
+      <h3 style="font-weight: var(--weight-semibold); margin-top: var(--space-8); margin-bottom: var(--space-4);">Tech Stack</h3>
+      <div class="tech-stack">
+        <span class="tech-badge">Laravel 13</span>
+        <span class="tech-badge">PHP 8.3</span>
+        <span class="tech-badge">MySQL 8.0</span>
+        <span class="tech-badge">Bootstrap 5</span>
+        <span class="tech-badge">RAG Chatbot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">02 — The Problem</span>
+      <h2 class="dev-section__title">Derived from on-site observation and an interview with the store owner.</h2>
+
+      <div class="dev-problem-list">
+        <div class="dev-problem-item">
+          <span class="dev-problem-item__num">01</span>
+          <p class="dev-problem-item__text">Stock and daily transactions were tracked manually, relying on memory and payment history, with no real-time way to know what's actually in stock.</p>
+        </div>
+        <div class="dev-problem-item">
+          <span class="dev-problem-item__num">02</span>
+          <p class="dev-problem-item__text">Customers had no way to check product availability online, so they had to call or visit the store first, an inefficient process for both sides.</p>
+        </div>
+        <div class="dev-problem-item">
+          <span class="dev-problem-item__num">03</span>
+          <p class="dev-problem-item__text">Parents often struggled to determine the correct uniform size for their child, previously relying entirely on the owner's decades of hands-on fitting experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">03 — Key Features</span>
+      <h2 class="dev-section__title">What The System Does</h2>
+
+      <div class="dev-feature-list">
+        <div class="dev-feature-item">
+          <span class="dev-feature-item__num">01</span>
+          <div>
+            <div class="dev-feature-item__title">Stock &amp; Product Management</div>
+            <p class="dev-feature-item__text">Admin can manage product variants (type, color, size) and track stock movement, with automatic alerts when stock is running low.</p>
+          </div>
+        </div>
+        <div class="dev-feature-item">
+          <span class="dev-feature-item__num">02</span>
+          <div>
+            <div class="dev-feature-item__title">Online Catalog &amp; Ordering</div>
+            <p class="dev-feature-item__text">Customers can browse the catalog with search and filters by category and education level, then place orders online before visiting the store.</p>
+          </div>
+        </div>
+        <div class="dev-feature-item">
+          <span class="dev-feature-item__num">03</span>
+          <div>
+            <div class="dev-feature-item__title">Digital Receipt</div>
+            <p class="dev-feature-item__text">Completed orders generate a downloadable digital receipt (PNG), so customers have proof of purchase without a physical printout.</p>
+          </div>
+        </div>
+        <div class="dev-feature-item">
+          <span class="dev-feature-item__num">04</span>
+          <div>
+            <div class="dev-feature-item__title">Sales &amp; Stock Reports</div>
+            <p class="dev-feature-item__text">Printable reports summarizing transactions and stock movement over a selected period, for the owner to review store performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHATBOT SPOTLIGHT ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">04 — Highlight</span>
+      <div class="chatbot-spotlight">
+        <h2 class="chatbot-spotlight__title">The AI Sizing Chatbot</h2>
+        <p class="chatbot-spotlight__text">The standout feature of this project is a Retrieval-Augmented Generation (RAG) chatbot that acts as a virtual store assistant. Instead of guessing, customers can simply ask a question, and the chatbot answers using a real sizing guide grounded in the store owner's own fitting knowledge, not a generic AI guess.</p>
+
+        <div class="chatbot-example">
+          <div class="chatbot-example__bubble">Ukuran baju untuk kelas 3 SD?</div>
+          <div class="chatbot-example__bubble">Ada kemeja putih ukuran 15?</div>
+          <div class="chatbot-example__bubble">Seragam pramuka SMP apa saja?</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOTS ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">05 — Screenshots</span>
+      <h2 class="dev-section__title">A Closer Look</h2>
+
+      <div class="screen-carousel" id="screen-carousel">
+        <div class="screen-carousel__track">
+          <img src="assets/projects/azzam-jaya/azzam-screen-1.png" alt="Product catalog page" class="is-active">
+          <img src="assets/projects/azzam-jaya/azzam-screen-2.png" alt="Tie product detail page">
+          <img src="assets/projects/azzam-jaya/azzam-screen-3.png" alt="AI chatbot open on the catalog page">
+          <img src="assets/projects/azzam-jaya/azzam-screen-4.png" alt="About Us page, Visit Us section">
+        </div>
+        <div class="screen-carousel__dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFLECTION ============ -->
+  <section class="dev-reflection">
+    <div class="container">
+      <h2 class="dev-reflection__title">Reflection</h2>
+      <p class="dev-reflection__text">I've built websites before for coursework and lab assignments, but this was the first one I carried through a complete, formally documented software development lifecycle, from requirements gathering to a tested, working product with the waterfall method.</p>
+      <p class="dev-reflection__text">Designing the chatbot's grounding logic, rather than letting it answer freely, taught me how important guardrails are when AI talks directly to real customers making purchasing decisions.</p>
+    </div>
+  </section>
+
+  <a href="projects.html" class="back-home">Back to projects</a>
+
+</main>
+
+<!-- ============ CONNECT ============ -->
+<section class="connect">
+  <div class="container">
+    <div class="connect__frame">
+      <h2 class="connect__title">Let's Stay <span class="text-accent">Connected</span></h2>
+      <p class="connect__subtitle">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+      <div class="connect__grid">
+        <a href="mailto:naurahaisyi75@gmail.com" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">Email</span>
+            <span class="connect__card-value">naurahaisyi75@gmail.com</span>
+          </span>
+        </a>
+
+        <a href="https://linkedin.com/in/naurahaisyi" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">LinkedIn</span>
+            <span class="connect__card-value">/in/naurahaisyi</span>
+          </span>
+        </a>
+
+        <a href="https://github.com/naurahraa" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">GitHub</span>
+            <span class="connect__card-value">@naurahraa</span>
+          </span>
+        </a>
+
+        <a href="https://www.instagram.com/naurahraa" target="_blank" rel="noopener" class="connect__card">
+          <span class="connect__card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </span>
+          <span class="connect__card-text">
+            <span class="connect__card-label">Instagram</span>
+            <span class="connect__card-value">@naurahraa</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER BAR ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__logo">Naurah<span>.</span></span>
+    <p class="footer__copyright">©Naurah 2026. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script>
+  (function () {
+    var carousel = document.getElementById('screen-carousel');
+    if (!carousel) return;
+
+    var slides = Array.from(carousel.querySelectorAll('.screen-carousel__track img'));
+    var dotsWrap = carousel.querySelector('.screen-carousel__dots');
+    var active = 0;
+    var timer;
+
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      if (i === 0) dot.classList.add('is-active');
+      dot.addEventListener('click', function () {
+        goTo(i);
+        restart();
+      });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.from(dotsWrap.children);
+
+    function goTo(index) {
+      slides[active].classList.remove('is-active');
+      dots[active].classList.remove('is-active');
+      active = index;
+      slides[active].classList.add('is-active');
+      dots[active].classList.add('is-active');
+    }
+
+    function next() {
+      goTo((active + 1) % slides.length);
+    }
+
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(next, 4000);
+    }
+
+    restart();
+  })();
+</script>
+</body>
+</html>
