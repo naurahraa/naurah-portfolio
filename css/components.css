@@ -152,8 +152,29 @@
 }
 
 @media (max-width: 860px) {
+  .navbar__cta {
+    display: none; /* nowrap text-nya bikin grid overflow di layar sempit */
+  }
   .navbar__links {
     display: none;
+  }
+  .navbar__links.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    padding: var(--space-4) var(--space-6) var(--space-6);
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid var(--border-subtle);
+  }
+  .navbar__links.is-open .navbar__link {
+    width: 100%;
+    padding: var(--space-3) 0;
   }
   .navbar__toggle {
     display: flex;
@@ -180,6 +201,13 @@
 .btn--lg { font-size: var(--text-2xl); } /* 24px */
 .btn--md { font-size: var(--text-xl); }  /* 20px */
 .btn--sm { font-size: var(--text-base); } /* 16px */
+
+@media (max-width: 640px) {
+  .btn--md {
+    font-size: var(--text-base); /* 20px -> 16px di HP */
+    padding: var(--space-2) var(--space-4);
+  }
+}
 
 .btn--primary {
   background: linear-gradient(180deg, var(--color-primary) 0%, #85C7FF 100%);

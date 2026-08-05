@@ -91,6 +91,26 @@
   color: var(--color-white);
 }
 
+/* di layar sempit, posisi absolute yang tersebar bisa kepotong/nabrak —
+   jadi disederhanain jadi baris biasa yang wrap */
+@media (max-width: 640px) {
+  .case-hero__team {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .team-cursor {
+    position: static;
+  }
+  .team-cursor svg {
+    display: none;
+  }
+  .team-cursor__tag {
+    position: static;
+  }
+}
+
 .case-hero__title {
   font-size: var(--fs-heading);
   font-weight: var(--fw-heading);
@@ -226,9 +246,9 @@
 ------------------------------------------ */
 .user-target {
   position: relative;
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: auto;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   margin-top: var(--space-20);
   margin-bottom: var(--space-20);
   padding: var(--space-20) var(--space-16);
@@ -474,6 +494,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
+}
+
+@media (max-width: 720px) {
+  .problem-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .problem-card {

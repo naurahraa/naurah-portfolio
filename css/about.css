@@ -218,7 +218,7 @@
 
 .timeline-item:hover .timeline-item__contribution,
 .timeline-item:focus-within .timeline-item__contribution {
-  max-height: 8rem;
+  max-height: 16rem;
   opacity: 1;
   margin-top: var(--space-3);
 }
