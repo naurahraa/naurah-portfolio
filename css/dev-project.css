@@ -7,6 +7,10 @@
   --project-accent: var(--color-primary);
 }
 
+.theme-skillus {
+  --color-primary: #4F4CEE;
+}
+
 /* ------------------------------------------
    HERO — full-bleed dark, tags monospace,
    ada tombol "Visit Live Site"
