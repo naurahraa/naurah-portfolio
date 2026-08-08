@@ -11,6 +11,10 @@
   --project-accent: var(--color-primary);
 }
 
+.theme-rekomendasi {
+  --project-accent: var(--color-primary);
+}
+
 /* ------------------------------------------
    HERO — full-bleed dark, tags monospace,
    ada tombol "Visit Live Site"
@@ -278,7 +282,9 @@
 }
 
 /* ------------------------------------------
-   CHATBOT SPOTLIGHT — sorotan fitur AI chatbot
+   CHATBOT SPOTLIGHT — sorotan fitur AI chatbot,
+   dipakai ulang juga buat model-comparison
+   highlight di project ML
 ------------------------------------------ */
 .chatbot-spotlight {
   background: var(--color-dark);
@@ -343,6 +349,46 @@
     max-width: 100%;
     justify-self: stretch;
   }
+}
+
+/* ------------------------------------------
+   MODEL COMPARE TABLE — dipakai di dalam
+   .chatbot-spotlight buat project ML yang
+   membandingkan beberapa model
+------------------------------------------ */
+.model-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-sm);
+}
+
+.model-compare-table th,
+.model-compare-table td {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.model-compare-table th {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+}
+
+.model-compare-table td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.model-compare-table tr.is-selected td {
+  color: var(--color-white);
+  font-weight: var(--weight-semibold);
+}
+
+.model-compare-table tr.is-selected td:first-child::after {
+  content: " ✓";
+  color: #7dd3fc;
 }
 
 /* ------------------------------------------
