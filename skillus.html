@@ -51,7 +51,7 @@
         <span class="dev-hero__tag">fullstack</span>
       </div>
       <h1 class="dev-hero__title">Event Ticketing Platform with Role-Based Dashboards for Peserta, Penyelenggara, and Admin</h1>
-      <p class="dev-hero__subtitle">SkillUs is a campus event ticketing platform, rebuilt from scratch as a coursework project — with a focus on shipping something that's actually production-grade, not just a working prototype.</p>
+      <p class="dev-hero__subtitle">SkillUs is a campus event ticketing platform, rebuilt from scratch as a coursework project focused on shipping something actually production-grade, not just a working prototype.</p>
 
       <div class="dev-hero__meta">
         <div class="dev-hero__meta-item">
@@ -91,8 +91,8 @@
     <div class="container">
       <span class="dev-section__num">01 — Overview</span>
       <h2 class="dev-section__title">What Is This Project?</h2>
-      <p class="dev-section__text">SkillUs is a ticketing platform for campus seminars, workshops, and webinars. It started as a course assignment, but I ended up rebuilding it entirely from scratch after realizing the earlier version was more of a working demo than an actually wired system — most flows looked complete on the surface but weren't connected to real data underneath.</p>
-      <p class="dev-section__text">The rebuild is structured around three separate role-based experiences — Peserta, Penyelenggara, and Admin — each with its own dashboard, permissions, and data scope, plus a complete ticket purchase flow from browsing to QR-code check-in.</p>
+      <p class="dev-section__text">SkillUs is a ticketing platform for campus seminars, workshops, and webinars. It started as a course assignment, but I ended up rebuilding it entirely from scratch after realizing the earlier version was more of a working demo than an actually wired system. Most flows looked complete on the surface but weren't connected to real data underneath.</p>
+      <p class="dev-section__text">The rebuild is structured around three separate role-based experiences (Peserta, Penyelenggara, and Admin), each with its own dashboard, permissions, and data scope, plus a complete ticket purchase flow from browsing to QR-code check-in.</p>
 
       <h3 style="font-weight: var(--weight-semibold); margin-top: var(--space-8); margin-bottom: var(--space-4);">Tech Stack</h3>
       <div class="tech-stack">
@@ -116,7 +116,7 @@
       <div class="dev-problem-list">
         <div class="dev-problem-item">
           <span class="dev-problem-item__num">01</span>
-          <p class="dev-problem-item__text">The earlier implementation had register and login pages that looked finished, but role-based access wasn't actually enforced — anyone could reach any dashboard just by typing the URL directly.</p>
+          <p class="dev-problem-item__text">The earlier implementation had register and login pages that looked finished, but role-based access wasn't actually enforced, so anyone could reach any dashboard just by typing the URL directly.</p>
         </div>
         <div class="dev-problem-item">
           <span class="dev-problem-item__num">02</span>
@@ -124,7 +124,7 @@
         </div>
         <div class="dev-problem-item">
           <span class="dev-problem-item__num">03</span>
-          <p class="dev-problem-item__text">There was no real distinction between what a peserta, penyelenggara, and admin could see or do — it was effectively one interface pretending to be three.</p>
+          <p class="dev-problem-item__text">There was no real distinction between what a peserta, penyelenggara, and admin could see or do; it was effectively one interface pretending to be three.</p>
         </div>
       </div>
     </div>
@@ -225,7 +225,7 @@
       <span class="dev-section__num">04 — Highlight</span>
       <div class="chatbot-spotlight">
         <h2 class="chatbot-spotlight__title">Debugging in Production, Not Just in Theory</h2>
-        <p class="chatbot-spotlight__text">This project's steepest learning curve happened after deployment, not before. A few issues only ever showed up in Vercel's production environment — never once in local development — which meant I had to actually trace each one back to its root cause instead of just patching around the symptom.</p>
+        <p class="chatbot-spotlight__text">This project's steepest learning curve happened after deployment, not before. A few issues only ever showed up in Vercel's production environment, never once in local development, which meant I had to actually trace each one back to its root cause instead of just patching around the symptom.</p>
 
         <div class="chatbot-example">
           <div class="chatbot-example__bubble">Edge Function size 1.03MB, limit 1MB</div>
@@ -233,7 +233,7 @@
           <div class="chatbot-example__bubble">Body exceeded 1MB limit (Server Action)</div>
         </div>
 
-        <p class="chatbot-spotlight__text" style="margin-top: var(--space-6); margin-bottom: 0;">Each one turned out to be a different layer of the stack: Prisma accidentally bundled into edge middleware, an auth config that needed to explicitly trust its own host in production, and a hard platform-level payload limit that no amount of Next.js config could override — solved by compressing images client-side before they ever leave the browser.</p>
+        <p class="chatbot-spotlight__text" style="margin-top: var(--space-6); margin-bottom: 0;">Each one turned out to be a different layer of the stack: Prisma accidentally bundled into edge middleware, an auth config that needed to explicitly trust its own host in production, and a hard platform-level payload limit that no amount of Next.js config could override. That last one got solved by compressing images client-side before they ever leave the browser.</p>
       </div>
     </div>
   </section>
@@ -260,8 +260,8 @@
   <section class="dev-reflection">
     <div class="container">
       <h2 class="dev-reflection__title">Reflection</h2>
-      <p class="dev-reflection__text">Unlike most of my previous projects, which mostly worked from static mockups, this one pushed me through the entire lifecycle — schema design, auth, business logic, and eventually a live deployment that real conditions (not just a local <code>npm run dev</code>) could break in ways I hadn't predicted.</p>
-      <p class="dev-reflection__text">The debugging process reshaped how I think about "done." A feature working on localhost isn't the same as a feature working in production — and the gap between those two is where most of the real engineering actually happens.</p>
+      <p class="dev-reflection__text">Unlike most of my previous projects, which mostly worked from static mockups, this one pushed me through the entire lifecycle: schema design, auth, business logic, and eventually a live deployment that real conditions (not just a local <code>npm run dev</code>) could break in ways I hadn't predicted.</p>
+      <p class="dev-reflection__text">The debugging process reshaped how I think about "done." A feature working on localhost isn't the same as a feature working in production, and the gap between those two is where most of the real engineering actually happens.</p>
     </div>
   </section>
 
