@@ -8,7 +8,7 @@
 }
 
 .theme-skillus {
-  --color-primary: #4F4CEE;
+  --project-accent: var(--color-primary);
 }
 
 /* ------------------------------------------
