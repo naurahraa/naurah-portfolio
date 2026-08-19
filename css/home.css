@@ -52,6 +52,22 @@
   color: var(--color-primary);
 }
 
+.hero__rotate {
+  display: inline-block;
+  color: var(--color-primary);
+  transition: opacity 0.25s ease;
+}
+
+.hero__rotate.is-fading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__rotate {
+    transition: none;
+  }
+}
+
 .hero__subtitle {
   font-family: var(--font-body);
   font-size: var(--fs-body-light);
@@ -423,91 +439,57 @@
 }
 
 /* ------------------------------------------
-   TOOLBOX
+   MARQUEE STRIP — strip kecil setelah hero,
+   scroll teks doang, background gradasi biru-putih
 ------------------------------------------ */
-.toolbox {
-  padding: var(--space-20) 0;
-  text-align: center;
+.marquee-strip {
+  padding: var(--space-6) 0;
 }
 
-.toolbox__title {
-  font-size: var(--fs-subheading);
-  font-weight: var(--fw-subheading);
-  letter-spacing: var(--ls-subheading);
-  margin-bottom: var(--space-3);
-}
-
-.toolbox__subtitle {
-  color: var(--text-secondary);
-  margin-bottom: var(--space-10);
-  font-family: var(--font-body);
-  font-size: var(--fs-body-small);
-  font-weight: var(--fw-body-small);
-}
-
-/* ------------------------------------------
-   TOOLBOX MARQUEE — geser terus tanpa henti
------------------------------------------- */
-.toolbox__marquee {
+.marquee-strip__band {
   overflow: hidden;
   width: 100%;
-  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-          mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  padding: var(--space-3) var(--space-6);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 104, 184, 0.22) 0%,
+    var(--color-white) 50%,
+    rgba(15, 104, 184, 0.22) 100%
+  );
 }
 
-.toolbox__track {
+.marquee-strip__track {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
   width: max-content;
-  padding: 0 var(--space-5);
-  animation: toolbox-marquee 22s linear infinite;
+  animation: marquee-strip-scroll 24s linear infinite;
 }
 
-.toolbox__marquee:hover .toolbox__track {
+.marquee-strip__band:hover .marquee-strip__track {
   animation-play-state: paused;
 }
 
-@keyframes toolbox-marquee {
+.marquee-strip__item {
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-dark-secondary);
+  white-space: nowrap;
+}
+
+.marquee-strip__dot {
+  color: rgba(15, 104, 184, 0.45);
+}
+
+@keyframes marquee-strip-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 
-.tool-card {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-full);
-  background: var(--bg-subtle);
-  white-space: nowrap;
-}
-
-.tool-card__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-}
-
-.tool-card__icon svg,
-.tool-card__icon img {
-  width: 100%;
-  height: 100%;
-}
-
-.tool-card__name {
-  font-family: var(--font-body);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-medium);
-  color: var(--text-primary);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .toolbox__track {
+  .marquee-strip__track {
     animation: none;
   }
 }

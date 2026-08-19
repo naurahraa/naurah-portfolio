@@ -78,3 +78,24 @@
     }, 100);
   });
 })();
+
+// ---- Hero rotating word ("A Passion for Design / Data / Innovation / Impact") ----
+(function () {
+  const el = document.getElementById('hero-rotate');
+  if (!el) return;
+
+  const words = ['Design', 'Data', 'Innovation', 'Impact'];
+  let index = 0;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  setInterval(() => {
+    el.classList.add('is-fading');
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      el.textContent = words[index];
+      el.classList.remove('is-fading');
+    }, 250);
+  }, 2200);
+})();
