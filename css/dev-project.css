@@ -15,6 +15,10 @@
   --project-accent: var(--color-primary);
 }
 
+.theme-ewallet {
+  --project-accent: var(--color-primary);
+}
+
 /* ------------------------------------------
    HERO — full-bleed dark, tags monospace,
    ada tombol "Visit Live Site"

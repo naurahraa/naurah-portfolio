@@ -49,6 +49,8 @@
         <span class="dev-hero__tag">development-project</span>
         <span class="dev-hero__tag">python</span>
         <span class="dev-hero__tag">machine-learning</span>
+        <span class="dev-hero__tag">sql</span>
+        <span class="dev-hero__tag">data-pipeline</span>
       </div>
       <h1 class="dev-hero__title">House Recommendation System with Machine Learning Price Estimation</h1>
       <p class="dev-hero__subtitle">A hybrid rule-based and machine learning web app that recommends house types and estimates market prices, trained on 900+ real house listings from South Jakarta.</p>
@@ -100,6 +102,8 @@
         <span class="tech-badge">scikit-learn</span>
         <span class="tech-badge">Streamlit</span>
         <span class="tech-badge">pandas</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">psycopg2</span>
         <span class="tech-badge">Google Colab</span>
       </div>
     </div>
@@ -128,10 +132,30 @@
     </div>
   </section>
 
+  <!-- ============ DATA PIPELINE UPGRADE ============ -->
+  <section class="dev-section">
+    <div class="container">
+      <span class="dev-section__num">03 — Data Pipeline Upgrade</span>
+      <h2 class="dev-section__title">From Notebook to Data Pipeline</h2>
+      <p class="dev-section__text">After the app was live, I revisited the project from a data engineering angle. The original workflow read directly from an Excel file and cleaned it inline inside the training notebook, everything living in one place with no separation of concerns and nothing to audit.</p>
+      <p class="dev-section__text">I rebuilt the data layer around a PostgreSQL warehouse: a Python ETL script handles extraction and cleaning, a parallel SQL script reproduces the same cleaning logic using window functions, and an automated validation script checks the result before it's allowed anywhere near the model.</p>
+
+      <div class="chatbot-spotlight" style="margin-top: var(--space-8);">
+        <h2 class="chatbot-spotlight__title">Pipeline at a glance</h2>
+        <ul class="chatbot-spotlight__text" style="margin: 0; padding-left: 1.2em;">
+          <li style="margin-bottom: var(--space-2);">Excel → <code style="color: var(--color-white); background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 4px;">raw_rumah</code> → <code style="color: var(--color-white); background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 4px;">clean_rumah</code> tables in PostgreSQL (Neon)</li>
+          <li style="margin-bottom: var(--space-2);">Deduplication and outlier filtering reproduced in pure SQL using <code style="color: var(--color-white); background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 4px;">ROW_NUMBER()</code> and <code style="color: var(--color-white); background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 4px;">PERCENTILE_CONT()</code></li>
+          <li style="margin-bottom: var(--space-2);">8 automated data quality checks (nulls, duplicates, value ranges) — 8/8 passing</li>
+          <li>Training notebook reads from the validated <code style="color: var(--color-white); background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 4px;">clean_rumah</code> table instead of the raw file</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FEATURES ============ -->
   <section class="dev-section">
     <div class="container">
-      <span class="dev-section__num">03 — Key Features</span>
+      <span class="dev-section__num">04 — Key Features</span>
       <h2 class="dev-section__title">What The System Does</h2>
 
       <div class="dev-feature-list">
@@ -170,7 +194,7 @@
   <!-- ============ MODEL COMPARISON SPOTLIGHT ============ -->
   <section class="dev-section">
     <div class="container">
-      <span class="dev-section__num">04 — Highlight</span>
+      <span class="dev-section__num">05 — Highlight</span>
       <div class="chatbot-spotlight">
         <h2 class="chatbot-spotlight__title">Choosing the Right Model</h2>
         <p class="chatbot-spotlight__text">Three regression models were trained and compared on log-transformed price data before picking a final one that balances accuracy and simplicity, rather than defaulting to the most complex option.</p>
@@ -186,23 +210,23 @@
           <tbody>
             <tr>
               <td>Linear Regression</td>
-              <td>0.605</td>
-              <td>48.6%</td>
+              <td>0.561</td>
+              <td>45.5%</td>
             </tr>
             <tr>
               <td>Decision Tree</td>
-              <td>0.758</td>
-              <td>34.2%</td>
+              <td>0.687</td>
+              <td>33.7%</td>
             </tr>
             <tr class="is-selected">
               <td>Random Forest</td>
-              <td>0.779</td>
-              <td>32.1%</td>
+              <td>0.736</td>
+              <td>30.1%</td>
             </tr>
           </tbody>
         </table>
 
-        <p class="chatbot-spotlight__text" style="margin-top: var(--space-6); margin-bottom: 0;">Feature importance analysis also showed land area and building area account for roughly 98% of the model's predictive power, so the final model was simplified from 5 features to 2 without meaningful loss in accuracy.</p>
+        <p class="chatbot-spotlight__text" style="margin-top: var(--space-6); margin-bottom: 0;">Feature importance analysis also showed land area and building area account for roughly 98% of the model's predictive power, so the final model was simplified to those two features, reaching an R² of 0.738 and MAPE of 29.8%, on par with the full 5-feature version.</p>
       </div>
     </div>
   </section>
@@ -210,7 +234,7 @@
   <!-- ============ SCREENSHOTS ============ -->
   <section class="dev-section">
     <div class="container">
-      <span class="dev-section__num">05 — Screenshots</span>
+      <span class="dev-section__num">06 — Screenshots</span>
       <h2 class="dev-section__title">A Closer Look</h2>
 
       <div class="screen-carousel" id="screen-carousel">
@@ -230,6 +254,7 @@
       <h2 class="dev-reflection__title">Reflection</h2>
       <p class="dev-reflection__text">This was the first project where I took something built purely for a grade and pushed it further after the course had already ended, without anyone asking me to. Replacing guessed thresholds with real quartiles, and comparing multiple models instead of picking one blindly, taught me the difference between an answer that works and one I can actually defend.</p>
       <p class="dev-reflection__text">Building the reasoning trace also changed how I think about AI products: showing why a system reached a conclusion matters just as much as the conclusion itself, especially for something as high-stakes as a house purchase.</p>
+      <p class="dev-reflection__text">Coming back to rebuild the data layer months later taught me a different lesson: a model is only as trustworthy as the pipeline feeding it. Writing the same cleaning logic twice, once in Python and once in SQL, made me appreciate how much can silently go wrong between "the data looks fine" and "the data is verified."</p>
     </div>
   </section>
 
